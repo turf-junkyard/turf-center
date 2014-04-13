@@ -1,18 +1,10 @@
+var test = require('tape')
+var center = require('./')
+var fc = require('./geojson/fc')
 
-
-var t = require('../index'),
-    should = require('should'),
-    _ = require('lodash')
-
-describe('center', function(){
-  it('should return the proper center for a FeatureCollection', function(done){
-    t.load(__dirname+'/testIn/FeatureCollection.geojson', function(err, layer){
-      if(err) throw err
-      t.center(layer, function(center){
-        center.should.be.ok
-        _.isEqual(center.geometry.coordinates, [75, -3]).should.be.true
-        done()
-      })
-    })
-  })
+test('center', function(t){
+  var centered = center(fc)
+  t.ok(centered, 'should return the proper center for a FeatureCollection')
+  t.deepEqual(centered.geometry.coordinates, [75, -3])
+  t.end()
 })
