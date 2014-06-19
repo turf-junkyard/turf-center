@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/morganherlocker/turf-center",
   "devDependencies": {
-    "tape": "^2.12.3"
+    "tape": "^2.13.3"
   },
   "dependencies": {
-    "turf-extent": "^0.1.1"
+    "turf-extent": "^0.1.3"
   }
 }
