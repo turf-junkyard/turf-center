@@ -4,6 +4,26 @@ turf-center
 
 Calculates the absolute center point of all features.
 
+###Install
+
+```sh
+npm install turf-center
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|fc|A Feature or FeatureCollection of any type|
+
+###Usage
+
+```js
+center(fc)
+```
+
+###Example
+
 ```js
 var center = require('turf-center')
 var fs = require('fs')
