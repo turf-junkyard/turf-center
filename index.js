@@ -1,11 +1,13 @@
-var extent = require('turf-extent');
+var extent = require('turf-extent'),
+    point = require('turf-point');
 
 /**
 * Calculates the absolute center point of all features.
 *
 * @module turf/center
 * @param {FeatureCollection} fc - a GeoJSON Feature or FeatureCollection
-* @return {FeatureCollection} center - a GeoJSON FeatureCollection of the absolute center points of all input features
+* @return {FeatureCollection} center - a GeoJSON FeatureCollection of the
+* absolute center points of all input features
 * @example
 * var features = [
 *     turf.point(-97.522259, 35.469100),
@@ -30,12 +32,5 @@ module.exports = function(layer, done){
   var ext = extent(layer);
   var x = (ext[0] + ext[2])/2;
   var y = (ext[1] + ext[3])/2;
-  var center = {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [x, y]
-    }
-  };
-  return center;
-}
+  return point([x, y]);
+};

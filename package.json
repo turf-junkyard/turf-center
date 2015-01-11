@@ -29,6 +29,7 @@
     "tape": "^3.0.3"
   },
   "dependencies": {
-    "turf-extent": "^1.0.0"
+    "turf-extent": "^1.0.0",
+    "turf-point": "^1.2.1"
   }
 }
