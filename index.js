@@ -5,8 +5,8 @@ var extent = require('turf-extent'),
 * Calculates the absolute center point of all features.
 *
 * @module turf/center
-* @param {FeatureCollection} fc - a GeoJSON Feature or FeatureCollection
-* @return {FeatureCollection} center - a GeoJSON FeatureCollection of the
+* @param {FeatureCollection} a GeoJSON Feature or FeatureCollection
+* @return {FeatureCollection} a GeoJSON FeatureCollection of the
 * absolute center points of all input features
 * @example
 * var features = [
