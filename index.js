@@ -25,9 +25,9 @@ var extent = require('turf-extent'),
  * ];
  * var fc = turf.featurecollection(features);
  * var centerPt = turf.center(fc);
- *
- * var result = turf.featurecollection(fc.features.concat(centerPt.features));
- *
+ * centerPt.properties['marker-size'] = 'large';
+ * centerPt.properties['marker-color'] = '#000';
+ * var result = turf.featurecollection(fc.features.concat(centerPt));
  * //=result
  */
 
