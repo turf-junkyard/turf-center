@@ -2,14 +2,14 @@ var extent = require('turf-extent'),
     point = require('turf-point');
 
 /**
- * Calculates the absolute center point of all features.
+ * Takes a {@link FeatureCollection} of any type and returns the absolute center point of all features.
  *
  * @module turf/center
- * @param {FeatureCollection} fc a GeoJSON Feature or FeatureCollection
- * @return {FeatureCollection} a GeoJSON FeatureCollection of the
- * absolute center points of all input features
+ * @param {FeatureCollection} features a FeatureCollection of any type
+ * @return {Point} a Point feature at the
+ * absolute center point of all input features
  * @example
- * var features = [
+ * var features = turf.featurecollection([
  *     turf.point([-97.522259, 35.469100]),
  *     turf.point([-97.502754, 35.463455]),
  *     turf.point([-97.508269, 35.463245]),
@@ -22,12 +22,14 @@ var extent = require('turf-extent'),
  *     turf.point([-97.517839, 35.466998]),
  *     turf.point([-97.508678, 35.464942]),
  *     turf.point([-97.514914, 35.463453])
- * ];
- * var fc = turf.featurecollection(features);
- * var centerPt = turf.center(fc);
+ * ]);
+ *
+ * var centerPt = turf.center(features);
  * centerPt.properties['marker-size'] = 'large';
  * centerPt.properties['marker-color'] = '#000';
- * var result = turf.featurecollection(fc.features.concat(centerPt));
+ *
+ * var result = turf.featurecollection(features.features.concat(centerPt));
+ *
  * //=result
  */
 
