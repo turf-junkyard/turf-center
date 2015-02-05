@@ -5,6 +5,7 @@ var extent = require('turf-extent'),
  * Takes a {@link FeatureCollection} of any type and returns the absolute center point of all features.
  *
  * @module turf/center
+ * @category measurement
  * @param {FeatureCollection} features a FeatureCollection of any type
  * @return {Point} a Point feature at the
  * absolute center point of all input features
