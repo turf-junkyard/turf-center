@@ -2077,22 +2077,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.02900261988646,
-          51.05007001220118
+          -114.02911397119072,
+          51.050271120392566
         ]
       },
-      "properties": {}
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -114.02900261988646,
-          51.05007001220118
-        ]
-      },
-      "properties": {}
+      "properties": {
+        "marker-color": "#f0f"
+      }
     }
   ]
 }
