@@ -2,12 +2,16 @@ var center = require('./');
 var Benchmark = require('benchmark');
 var fs = require('fs');
 
-var fc = require('./geojson/fc');
+var boxFC = JSON.parse(fs.readFileSync(__dirname+'/fixtures/in/box.geojson'));
+var blockFC = JSON.parse(fs.readFileSync(__dirname+'/fixtures/in/block.geojson'));
 
 var suite = new Benchmark.Suite('turf-center');
 suite
-  .add('turf-center',function () {
-    center(fc);
+  .add('turf-center#simple',function () {
+    center(boxFC);
+  })
+  .add('turf-center#complex',function () {
+    center(blockFC);
   })
   .on('cycle', function (event) {
     console.log(String(event.target));
