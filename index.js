@@ -114,7 +114,7 @@ var extent = require('turf-extent'),
  * //=result
  */
 
-module.exports = function(layer, done){
+module.exports = function(layer) {
   var ext = extent(layer);
   var x = (ext[0] + ext[2])/2;
   var y = (ext[1] + ext[3])/2;
