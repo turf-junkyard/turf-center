@@ -6,7 +6,7 @@ var extent = require('turf-extent'),
  *
  * @module turf/center
  * @category measurement
- * @param {FeatureCollection<Point|LineString|Polygon>} features input features
+ * @param {FeatureCollection} features input features
  * @return {Feature<Point>} a Point feature at the
  * absolute center point of all input features
  * @example
